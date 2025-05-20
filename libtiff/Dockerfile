@@ -16,7 +16,7 @@ COPY ${BUG}/${BUG}.patch ${BUG}.patch
 RUN git apply ${BUG}.patch
 
 RUN ./autogen.sh && \
-    ./configure --disable-shared
+    ./configure --disable-shared --enable-tools
 RUN make -j$(nproc) clean && \
     make -j$(nproc) && \
     make install
