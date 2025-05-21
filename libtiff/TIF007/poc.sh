@@ -4,7 +4,7 @@
 
 docker run --rm \
     $TAG \
-    tiffinfo -D /test/crash
+    tiffinfo -D $CRASHFILE
 
 # OOM Error: Memory allocation attempt 4449586117620 over memory limit (268435456)
 echo "Exit code: $?"

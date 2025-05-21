@@ -1,6 +1,7 @@
 FROM ubuntu:25.04
 
 ARG BUG
+ARG CRASHFILE
 
 RUN apt-get update && apt-get install -y git make autoconf automake libtool cmake nasm \
         zlib1g-dev liblzma-dev libjpeg-turbo8-dev wget g++
@@ -24,4 +25,4 @@ RUN make -j$(nproc) clean && \
 WORKDIR /
 RUN rm -rf /work
 
-COPY ${BUG}/*_${BUG}.* /test/crash
+COPY ${BUG}/*_${BUG}.* ${CRASHFILE}

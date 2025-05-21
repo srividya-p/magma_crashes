@@ -4,7 +4,7 @@
 
 docker run --rm \
     $TAG \
-    tiffcp /test/crash /test/crash_out
+    tiffcp $CRASHFILE /test/crash_out
 
 # Segmentation fault: exit code 139 (SIGSEGV)
 echo "Exit code: $?"
