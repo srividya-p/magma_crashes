@@ -2,7 +2,7 @@
 
 # https://www.cve.org/CVERecord?id=CVE-2016-10270
 
-docker run --rm \
+docker run -it --rm \
     $TAG \
     tiffinfo -D $CRASHFILE
 
