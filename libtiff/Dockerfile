@@ -5,7 +5,7 @@ ARG BUG
 RUN apt-get update && apt-get install -y git make autoconf automake libtool cmake nasm \
         zlib1g-dev liblzma-dev libjpeg-turbo8-dev wget g++
 
-RUN git clone https://gitlab.com/libtiff/libtiff.git /work
+RUN git clone --no-checkout https://gitlab.com/libtiff/libtiff.git /work
 WORKDIR /work
 RUN git checkout 651b14ffa91722bd1815e367c8e7708925057430
 
@@ -21,5 +21,7 @@ RUN make -j$(nproc) clean && \
     make -j$(nproc) && \
     make install
 
-COPY ${BUG}/*_${BUG}.* /test/crash
 WORKDIR /
+RUN rm -rf /work
+
+COPY ${BUG}/*_${BUG}.* /test/crash

@@ -2,7 +2,7 @@
 
 # https://www.cve.org/CVERecord?id=CVE-2016-10270
 
-docker run -it --rm \
+docker run --rm \
     $TAG \
     tiffinfo -D /test/crash
 
