@@ -19,8 +19,8 @@ RUN git apply ${BUG}.patch
 RUN ./autogen.sh && \
     ./configure --disable-shared --enable-tools
 RUN make -j$(nproc) clean && \
-    make -j$(nproc) && \
-    make install
+    make -j$(nproc)
+RUN make install
 
 WORKDIR /
 RUN rm -rf /work
