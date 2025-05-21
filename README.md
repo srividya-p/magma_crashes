@@ -1,6 +1,6 @@
 # magma_crashes
 
-This repository contains PoCs for crashes discovered in [srividya-p/magma](https://github.com/srividya-p/magma).
+This repository contains PoCs for crashes discovered in [srividya-p/magma](https://github.com/srividya-p/magma). It currently only contains bugs that were ported for for the latest target versions (first commit of 2025), and were triggered during the evaluation of new magma. The list of ported bugs can be found in [this document](https://docs.google.com/document/d/1dZ7QzyhwkT-5lhkwfrk7Jsg29lsgWXlo36mJu9zXQoU).
 
 To run a PoC create a file named `config` in the repository root with the following values (for example):
 ```bash
